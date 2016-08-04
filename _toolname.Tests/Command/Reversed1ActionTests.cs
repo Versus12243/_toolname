@@ -20,9 +20,9 @@ namespace _toolname.Action.Tests
             IFileService service = TestSetup.GetService();
 
             var command = new Reversed1Action(service);
-            var result = command.ExecuteAsync("D:");
+            var result = command.ExecuteAsync("D:").Result;
 
-            var expectedResult = new List<string> { @"wew.cpp\Visual Micro\pm.fw.HomeController\SuccessRun" };
+            var expectedResult = new List<string> { @"wew.cpp\Visual Micro\pm.fw.HomeController\SuccessRun\" };
             
 
             Assert.AreEqual(expectedResult, result);

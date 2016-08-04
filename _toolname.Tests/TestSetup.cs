@@ -24,7 +24,7 @@ namespace _toolname.Tests
         public static IFileService GetService()
         {
             return Mock.Of<IFileService>(s => s.GetFiles(
-                It.IsAny<string>(), It.IsAny<string>()).Result == FilePath);
+                It.IsAny<string>(), It.IsAny<string>()) == Task.FromResult<IEnumerable<string>>(FilePath));
         }
     }
 }

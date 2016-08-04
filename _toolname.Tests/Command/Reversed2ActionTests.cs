@@ -20,7 +20,7 @@ namespace _toolname.Action.Tests
             IFileService service = TestSetup.GetService();
 
             var command = new Reversed2Action(service);
-            var result = command.ExecuteAsync("D:");
+            var result = command.ExecuteAsync("D:").Result;
 
             var expectedResult = new List<string> { @"ppc.wew\orciM lausiV\rellortnoCemoH.wf.mp\nuRsseccuS\" };
 
